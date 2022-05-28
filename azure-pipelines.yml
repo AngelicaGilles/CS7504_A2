@@ -43,7 +43,7 @@ stages:
 
     - upload: manifests
       artifact: manifests
-- stage: Approval Required
+- stage: Approval
   jobs:
   - deployment: Deploy 
     displayName: Approval
