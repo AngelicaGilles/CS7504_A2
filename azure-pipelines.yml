@@ -58,6 +58,10 @@ stages:
       runOnce:
         deploy:
           steps:
+          - task: ManualIntervention@8
+            inputs:
+              instructions: 'Request for approval'
+              emailRecipients: 'Ma.Gilles01@student.weltec.ac.nz'
           - task: KubernetesManifest@0
             displayName: Create imagePullSecret
             inputs:
